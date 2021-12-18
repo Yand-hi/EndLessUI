@@ -1,0 +1,9 @@
+node_modules
+.DS_Store
+dist
+/dist
+erro_log
+*.local
+/.history
+/.idea
+.vscode
