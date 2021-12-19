@@ -3,9 +3,9 @@
 </demo>
 <template>
   <div>
-    <Button>抽烟</Button>
-    <Button theme="link">喝酒</Button>
-    <Button theme="text">烫头</Button>
+    <Button>click me</Button>
+    <Button theme="link">click me</Button>
+    <Button theme="text">click me</Button>
   </div>
 </template>
 

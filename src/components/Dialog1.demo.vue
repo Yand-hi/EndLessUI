@@ -11,11 +11,11 @@
       :cancel="f2"
     >
       <template v-slot:content>
-        <strong>hi</strong>
-        <div>hi2</div>
+        <strong>hello</strong>
+        <div>world</div>
       </template>
       <template v-slot:title>
-        <strong>加粗的标题</strong>
+        <strong>标题</strong>
       </template>
     </Dialog>
   </div>
@@ -24,7 +24,6 @@
 <script lang="ts">
 import { Button, Dialog } from "../lib/index";
 import { ref } from "vue";
-import { openDialog } from "../lib/openDialog";
 export default {
   components: {
     Dialog,

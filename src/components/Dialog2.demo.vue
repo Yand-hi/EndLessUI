@@ -9,7 +9,7 @@
 
 <script lang="ts">
 import { Button, openDialog } from "../lib/index";
-import { ref, h } from "vue";
+import { h } from "vue";
 export default {
   components: {
     Button,
