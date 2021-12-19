@@ -6,7 +6,7 @@
         <h1>Free UI</h1>
         <h2>一个充满自由气息的 UI 框架</h2>
         <p class="actions">
-          <a href="">Github</a>
+          <a href="https://github.com/Yand-hi/FreeUI">Github</a>
           <router-link to="/doc">开始</router-link>
         </p>
       </div>
