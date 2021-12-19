@@ -1,9 +1,9 @@
 <demo>
-常规用法
+支持loading
 </demo>
 
 <template>
-  <Switch v-model:value="bool" />
+  <Switch v-model:value="bool" loading />
 </template>
 
 <script lang="ts">
