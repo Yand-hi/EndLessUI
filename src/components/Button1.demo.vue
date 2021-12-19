@@ -1,11 +1,11 @@
 <demo>
-常规使用
+基础用法
 </demo>
 <template>
   <div>
-    <Button>你好</Button>
-    <Button theme="link">你好</Button>
-    <Button theme="text">你好</Button>
+    <Button>抽烟</Button>
+    <Button theme="link">喝酒</Button>
+    <Button theme="text">烫头</Button>
   </div>
 </template>
 

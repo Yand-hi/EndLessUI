@@ -54,14 +54,16 @@ export default {
 $border-color: #d9d9d9;
 .demo {
   border: 1px solid $border-color;
+  border-radius: 10px;
   margin: 16px 0 32px;
+  box-shadow: 0 5px 5px rgb(51 51 51 / 10%);
   > h2 {
     font-size: 20px;
-    padding: 8px 16px;
+    padding: 8px 20px;
     border-bottom: 1px solid $border-color;
   }
   &-component {
-    padding: 16px;
+    padding: 16px 20px;
   }
   &-actions {
     padding: 8px 16px;
