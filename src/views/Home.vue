@@ -92,28 +92,31 @@ $color: #590089;
         grid-area: icon;
         width: 64px;
         height: 64px;
+        margin: 0px 0px 0px 30px;
       }
       > h3 {
         grid-area: title;
         font-size: 28px;
+        margin: 0px 0px 0px 30px;
       }
       > p {
         grid-area: text;
+        margin: 0px 0px 0px 30px;
       }
     }
   }
 }
 .banner {
   color: $color;
-  padding: 120px 0;
+  padding: 150px 0 120px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   > .actions {
-    padding: 8px 0;
+    padding: 10px 0;
     a {
-      margin: 0 8px;
+      margin: 0 10px;
       background: $green;
       color: white;
       display: inline-block;

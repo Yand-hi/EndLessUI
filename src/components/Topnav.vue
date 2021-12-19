@@ -56,8 +56,8 @@ $color: #002fa7;
     max-width: 6em;
     margin-right: auto;
     > svg {
-      width: 32px;
-      height: 32px;
+      width: 40px;
+      height: 40px;
     }
   }
   > .menu {
@@ -86,6 +86,10 @@ $color: #002fa7;
     }
     > .logo {
       margin: 0 auto;
+      > svg {
+        width: 32px;
+        height: 32px;
+      }
     }
     > .toggleAside {
       display: inline-block;
