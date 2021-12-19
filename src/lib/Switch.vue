@@ -37,6 +37,7 @@ $h2: $h - 4px;
   background: #bfbfbf;
   border-radius: $h / 2;
   position: relative;
+  -webkit-tap-highlight-color: transparent;
   cursor: pointer;
   > span {
     position: absolute;
