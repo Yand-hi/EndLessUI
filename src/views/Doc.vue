@@ -97,6 +97,9 @@ aside {
   }
   > ol {
     > li {
+      :hover {
+        background: #eef2f7;
+      }
       > a {
         display: block;
         padding: 12px 16px 8px;

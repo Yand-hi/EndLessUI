@@ -7,7 +7,7 @@
     </router-link>
     <ul class="menu">
       <li>
-        <router-link to="/doc">文档</router-link>
+        <router-link to="/doc">文 档</router-link>
       </li>
     </ul>
     <svg
@@ -40,7 +40,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$color: #002fa7;
+$color: #000;
 .topnav {
   color: $color;
   display: flex;
