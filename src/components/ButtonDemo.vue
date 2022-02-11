@@ -6,6 +6,7 @@
     <Demo :component="Button3Demo" />
     <Demo :component="Button4Demo" />
     <Demo :component="Button5Demo" />
+    <ButtonAttrs/>
   </div>
 </template>
 
@@ -16,8 +17,12 @@ import Button2Demo from "./Button2.demo.vue";
 import Button3Demo from "./Button3.demo.vue";
 import Button4Demo from "./Button4.demo.vue";
 import Button5Demo from "./Button5.demo.vue";
+import Attributes from './SwitchAttrs.vue'
+import ButtonAttrs from './ButtonAttrs.vue'
 export default {
   components: {
+    ButtonAttrs,
+    Attributes,
     Demo,
   },
   setup() {

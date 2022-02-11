@@ -4,6 +4,7 @@
     <Demo :component="Switch1Demo" />
     <Demo :component="Switch2Demo" />
     <Demo :component="Switch3Demo" />
+    <SwitchAttrs/>
   </div>
 </template>
 
@@ -12,9 +13,13 @@ import Switch1Demo from "./Switch1.demo.vue";
 import Switch2Demo from "./Switch2.demo.vue";
 import Switch3Demo from "./Switch3.demo.vue";
 import Demo from "./Demo.vue";
+import Attributes from './SwitchAttrs.vue'
+import SwitchAttrs from './SwitchAttrs.vue'
 
 export default {
   components: {
+    SwitchAttrs,
+    Attributes,
     Demo,
   },
   setup() {
