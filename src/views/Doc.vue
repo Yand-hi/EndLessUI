@@ -6,34 +6,34 @@
         <h2>文档</h2>
         <ol>
           <li>
-            <router-link to="/doc/intro">介绍</router-link>
+            <router-link to="/doc/intro">&nbsp&nbsp&nbsp介绍</router-link>
           </li>
           <li>
-            <router-link to="/doc/start">开始</router-link>
+            <router-link to="/doc/start">&nbsp&nbsp&nbsp开始</router-link>
           </li>
           <li>
-            <router-link to="/doc/install">安装</router-link>
+            <router-link to="/doc/install">&nbsp&nbsp&nbsp安装</router-link>
           </li>
         </ol>
         <h2>组件列表</h2>
         <ol>
           <li>
-            <router-link to="/doc/switch">Switch 组件</router-link>
+            <router-link to="/doc/switch">&nbsp&nbsp&nbspSwitch 组件</router-link>
           </li>
           <li>
-            <router-link to="/doc/button">Button 组件</router-link>
+            <router-link to="/doc/button">&nbsp&nbsp&nbspButton 组件</router-link>
           </li>
           <li>
-            <router-link to="/doc/dialog">Dialog 组件</router-link>
+            <router-link to="/doc/dialog">&nbsp&nbsp&nbspDialog 组件</router-link>
           </li>
           <li>
-            <router-link to="/doc/tabs">Tabs 组件</router-link>
+            <router-link to="/doc/tabs">&nbsp&nbsp&nbspTabs 组件</router-link>
           </li>
           <li>
-            <router-link to="/doc/input">Input 组件</router-link>
+            <router-link to="/doc/input">&nbsp&nbsp&nbspInput 组件</router-link>
           </li>
           <li>
-            <router-link to="/doc/grid">Grid 组件</router-link>
+            <router-link to="/doc/grid">&nbsp&nbsp&nbspGrid 组件</router-link>
           </li>
         </ol>
       </aside>
@@ -57,6 +57,8 @@ export default {
 
 <style lang="scss" scoped>
 $aside-index: 10;
+$color: #2c3e50;
+$color-active: #646cff;
 .layout {
   display: flex;
   flex-direction: column;
@@ -80,9 +82,12 @@ $aside-index: 10;
   }
   > main {
     flex-grow: 1;
-    padding: 16px;
+    margin: 10px 80px;
     @media (min-width: 800px) {
       padding: 16px 40px 16px 140px;
+    }
+    @media (max-width: 500px) {
+      margin: 10px 30px;
     }
   }
 }
@@ -90,21 +95,22 @@ aside {
   background: #fff;
   box-shadow: 5px 0 5px rgb(51 51 51 / 10%);
   width: 150px;
-  padding: 16px 0;
   position: fixed;
   top: 0;
   left: 0;
-  padding-top: 70px;
+  padding: 80px 0 16px;
   height: 100%;
   z-index: $aside-index;
   > h2 {
+    color: $color;
     margin-bottom: 4px;
     padding: 0 16px;
+    font-weight: 600;
   }
   > ol {
     > li {
       :hover {
-        background: #eef2f7;
+        color: $color-active;
       }
       > a {
         display: block;
@@ -112,8 +118,8 @@ aside {
         text-decoration: none;
       }
       .router-link-active {
-        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-        border-right: 3px solid #787878;
+        color: $color-active;
+        border-left: 4px solid $color-active;
       }
     }
   }

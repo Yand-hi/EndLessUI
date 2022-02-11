@@ -51,8 +51,9 @@ $color: #646cff;
 .topnav {
   border-bottom: 1px solid #e7e7e8;
   color: $color;
+  background: #ffffff;
   display: flex;
-  padding: 16px;
+  padding: 14px 16px;
   position: fixed;
   top: 0;
   left: 0;
@@ -69,8 +70,8 @@ $color: #646cff;
       text-decoration: none;
     }
     > svg {
-      width: 30px;
-      height: 30px;
+      width: 25px;
+      height: 25px;
     }
   }
   > .menu {

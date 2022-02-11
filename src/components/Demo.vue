@@ -6,7 +6,7 @@
     </div>
     <div class="demo-actions">
       <Button @click="hideCode" v-if="codeVisible">隐藏代码</Button>
-      <Button @click="showCode" v-else>查看代码</Button>
+      <Button @click="showCode" v-else>	&lt;/&gt;查看代码</Button>
     </div>
     <div class="demo-code" v-if="codeVisible">
       <pre class="language-html" v-html="html" />
@@ -53,10 +53,10 @@ export default {
 <style lang="scss" scoped>
 $border-color: #d9d9d9;
 .demo {
-  border: 1px solid $border-color;
-  border-radius: 20px;
+  //border: 1px solid $border-color;
+  //border-radius: 20px;
   margin: 16px 0 32px;
-  box-shadow: 0 10px 10px rgb(51 51 51 / 10%);
+  //box-shadow: 0 10px 10px rgb(51 51 51 / 10%);
   > h2 {
     font-size: 20px;
     padding: 8px 20px;
@@ -71,7 +71,7 @@ $border-color: #d9d9d9;
   }
   &-code {
     padding: 8px 16px;
-    border-top: 1px dashed $border-color;
+    //border-top: 1px dashed $border-color;
     > pre {
       line-height: 1.1;
       font-family: Consolas, "Courier New", Courier, monospace;

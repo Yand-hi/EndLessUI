@@ -75,7 +75,7 @@ $hover-color: #747bff;
 $border-radius: 24px;
 .features {
   border-top: 1px solid #e7e7e8;
-  margin: 56px auto;
+  margin: 56px auto 0;
   padding: 0 16px;
   @media (min-width: 800px) {
     width: 800px;
@@ -127,7 +127,7 @@ $border-radius: 24px;
   }
 }
 .banner {
-  padding: 120px 0 20px;
+  padding: 130px 0 20px;
   display: flex;
   justify-content: center;
   align-items: center;

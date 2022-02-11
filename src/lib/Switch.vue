@@ -51,7 +51,7 @@ $h2: $h - 4px;
     > .switch-loading {
       width: 14px;
       height: 14px;
-      margin: 1px 0 0;
+      margin-top: 2px;
       cursor: wait;
       display: inline-block;
       border-radius: 8px;
@@ -63,7 +63,7 @@ $h2: $h - 4px;
     }
   }
   &[disabled] {
-    pointer-events: none;
+    cursor: not-allowed;
   }
   &.free-checked {
     background: #1890ff;
