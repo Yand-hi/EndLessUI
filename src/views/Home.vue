@@ -21,7 +21,7 @@
             <svg class="top-icon">
               <use xlink:href="#icon-github"></use>
             </svg>
-            Github
+            &nbspGithub
           </a>
           </span>
         </p>
@@ -40,15 +40,15 @@
           <svg>
             <use xlink:href="#icon-ts"></use>
           </svg>
-          <h3>基于 TS</h3>
-          <p>源代码采用 TypeScript 书写</p>
+          <h3>TypeScript</h3>
+          <p>源代码采用 TypeScript 编写</p>
         </li>
         <li>
           <svg>
             <use xlink:href="#icon-npm"></use>
           </svg>
           <h3>发布至 npm</h3>
-          <p>使用 Rollup 打包并上传 npm</p>
+          <p>使用 Rollup 打包并上传至 npm</p>
         </li>
         <li>
           <svg>

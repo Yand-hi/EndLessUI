@@ -4,7 +4,7 @@
       <svg class="icon" aria-hidden="true">
         <use xlink:href="#icon-logo"></use>
       </svg>
-      <span> Infinite</span>
+      <span> Infinite </span>
     </router-link>
     <ul class="menu">
       <li>
@@ -47,7 +47,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$color: #2c3e50;
+$color: #646cff;
 .topnav {
   border-bottom: 1px solid #e7e7e8;
   color: $color;
@@ -64,6 +64,10 @@ $color: #2c3e50;
     max-width: 6em;
     margin-right: auto;
     font-size: 1.5em;
+    font-weight: 600;
+    &:hover {
+      text-decoration: none;
+    }
     > svg {
       width: 30px;
       height: 30px;
@@ -75,6 +79,7 @@ $color: #2c3e50;
     flex-wrap: nowrap;
     > li {
       margin: 0 1em;
+      font-weight: 600;
     }
   }
   > .toggleAside {
