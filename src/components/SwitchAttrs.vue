@@ -13,25 +13,18 @@
       </thead>
       <tbody>
       <tr>
-        <td>2019</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
+        <td>disabled</td>
+        <td>是否禁用状态</td>
+        <td>boolean</td>
+        <td>&nbsp/</td>
+        <td>false</td>
       </tr>
       <tr>
-        <td>2020</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-      </tr>
-      <tr>
-        <td>2021</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
+        <td>loading</td>
+        <td>是否加载中状态</td>
+        <td>boolean</td>
+        <td>&nbsp/</td>
+        <td>false</td>
       </tr>
       </tbody>
     </table>
@@ -72,6 +65,7 @@ $border-color: #d9d9d9;
 
     tbody {
       td {
+        font-size: 14px;
         color: $color-td;
         height: 50px;
         width: 84px;
