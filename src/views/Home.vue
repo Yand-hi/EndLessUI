@@ -6,8 +6,18 @@
         <h1>Free UI</h1>
         <h2>一个充满自由气息的 UI 框架</h2>
         <p class="actions">
-          <a href="https://github.com/Yand-hi/FreeUI">Github</a>
-          <router-link to="/doc">开始</router-link>
+          <router-link to="/doc">
+            <svg class="top-icon">
+              <use xlink:href="#icon-start"></use>
+            </svg>
+            Start
+          </router-link>
+          <a href="https://github.com/Yand-hi/FreeUI">
+            <svg class="top-icon">
+              <use xlink:href="#icon-GitHub"></use>
+            </svg>
+            Github
+          </a>
         </p>
       </div>
     </div>
@@ -24,8 +34,15 @@
           <svg>
             <use xlink:href="#icon-ts"></use>
           </svg>
-          <h3>基于 TypeScript</h3>
+          <h3>基于 TS</h3>
           <p>源代码采用 TypeScript 书写</p>
+        </li>
+        <li>
+          <svg>
+            <use xlink:href="#icon-npm"></use>
+          </svg>
+          <h3>发布至 npm</h3>
+          <p>使用 Rollup 打包并上传 npm</p>
         </li>
         <li>
           <svg>
@@ -71,7 +88,7 @@ $color: #590089;
     width: 1200px;
     > ul {
       > li {
-        width: 33.3333%;
+        width: 25%;
       }
     }
   }
@@ -92,16 +109,16 @@ $color: #590089;
         grid-area: icon;
         width: 64px;
         height: 64px;
-        margin: 0px 0px 0px 30px;
+        margin: 0 0 0 30px;
       }
       > h3 {
         grid-area: title;
         font-size: 28px;
-        margin: 0px 0px 0px 30px;
+        margin: 0 0 0 30px;
       }
       > p {
         grid-area: text;
-        margin: 0px 0px 0px 30px;
+        margin: 0 0 0 30px;
       }
     }
   }
@@ -117,13 +134,22 @@ $color: #590089;
     padding: 10px 0;
     a {
       margin: 0 10px;
-      background: $green;
-      color: white;
+      border:  1px solid $green;
+      color: black;
       display: inline-block;
       padding: 8px 24px;
       border-radius: $border-radius;
+      text-align: center;
       &:hover {
         text-decoration: none;
+      }
+      .top-icon {
+        width: 20px;
+        height: 20px;
+        margin-bottom: 2px;
+        display: inline-block;
+        vertical-align: middle;
+        color: inherit;
       }
     }
   }
