@@ -4,8 +4,15 @@
       <svg class="icon" aria-hidden="true">
         <use xlink:href="#icon-logo"></use>
       </svg>
+      <span> Infinite</span>
     </router-link>
     <ul class="menu">
+      <li>
+        <a href="#">npm</a>
+      </li>
+      <li>
+        <a href="#">Gitee</a>
+      </li>
       <li>
         <router-link to="/doc">文 档</router-link>
       </li>
@@ -40,8 +47,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$color: #000;
+$color: #2c3e50;
 .topnav {
+  border-bottom: 1px solid #e7e7e8;
   color: $color;
   display: flex;
   padding: 16px;
@@ -55,9 +63,10 @@ $color: #000;
   > .logo {
     max-width: 6em;
     margin-right: auto;
+    font-size: 1.5em;
     > svg {
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
     }
   }
   > .menu {

@@ -3,21 +3,27 @@
     <div class="topnavAndBanner">
       <Topnav />
       <div class="banner">
-        <h1>Free UI</h1>
-        <h2>一个充满自由气息的 UI 框架</h2>
+        <div class="figure">
+          <svg class="logo">
+            <use xlink:href="#icon-logo"></use>
+          </svg>
+        </div>
+        <h1>Infinite UI</h1>
+        <h2>一个充满无限可能的 UI 框架</h2>
         <p class="actions">
-          <router-link to="/doc">
-            <svg class="top-icon">
-              <use xlink:href="#icon-start"></use>
-            </svg>
-            Start
+          <span class="start">
+            <router-link to="/doc">
+            Get Started
           </router-link>
-          <a href="https://github.com/Yand-hi/FreeUI">
+          </span>
+          <span class="github">
+            <a href="https://github.com/Yand-hi/FreeUI">
             <svg class="top-icon">
-              <use xlink:href="#icon-GitHub"></use>
+              <use xlink:href="#icon-github"></use>
             </svg>
             Github
           </a>
+          </span>
         </p>
       </div>
     </div>
@@ -62,19 +68,14 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-$green: #590089;
-$border-radius: 20px;
-$color: #590089;
-.topnavAndBanner {
-  background: linear-gradient(
-    135deg,
-    rgba(208, 128, 255, 1) 0%,
-    rgba(126, 173, 240, 1) 100%
-  );
-  clip-path: ellipse(80% 60% at 50% 40%);
-}
+$colorH1: #2c3e50;
+$colorH2: #476582;
+$bgcolor: #646cff;
+$hover-color: #747bff;
+$border-radius: 24px;
 .features {
-  margin: 64px auto;
+  border-top: 1px solid #e7e7e8;
+  margin: 56px auto;
   padding: 0 16px;
   @media (min-width: 800px) {
     width: 800px;
@@ -112,11 +113,13 @@ $color: #590089;
         margin: 0 0 0 30px;
       }
       > h3 {
+        color: $colorH1;
         grid-area: title;
         font-size: 28px;
         margin: 0 0 0 30px;
       }
       > p {
+        color: $colorH2;
         grid-area: text;
         margin: 0 0 0 30px;
       }
@@ -124,32 +127,57 @@ $color: #590089;
   }
 }
 .banner {
-  color: $color;
-  padding: 150px 0 120px 0;
+  padding: 120px 0 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  h1 {
+    color: $colorH1;
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 5px;
+  }
+  h2 {
+    color: $colorH2;
+    margin-bottom: 20px;
+  }
+  .figure {
+    margin: 0;
+    .logo {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 40px;
+    }
+  }
   > .actions {
     padding: 10px 0;
+    .start {
+      color: $bgcolor;
+    }
+    .github {
+      color: $bgcolor;
+    }
     a {
       margin: 0 10px;
-      border:  1px solid $green;
-      color: black;
+      border:  2px solid $bgcolor;
       display: inline-block;
       padding: 8px 24px;
       border-radius: $border-radius;
       text-align: center;
+      font-weight: 600;
+      font-size: 18px;
       &:hover {
+        color: #ffffff;
+        background: $hover-color;
         text-decoration: none;
       }
       .top-icon {
         width: 20px;
         height: 20px;
-        margin-bottom: 2px;
+        margin-bottom: 4px;
         display: inline-block;
         vertical-align: middle;
-        color: inherit;
       }
     }
   }
