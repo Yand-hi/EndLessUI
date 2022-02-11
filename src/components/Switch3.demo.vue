@@ -1,5 +1,5 @@
 <demo>
-支持loading
+loading 加载中
 </demo>
 
 <template>

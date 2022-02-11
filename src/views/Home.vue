@@ -135,7 +135,8 @@ $border-radius: 24px;
   h1 {
     color: $colorH1;
     font-weight: 600;
-    line-height: 1.25;
+    font-size: 3rem;
+    line-height: 1;
     margin-bottom: 5px;
   }
   h2 {

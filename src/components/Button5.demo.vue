@@ -1,10 +1,11 @@
 <demo>
-支持显示加载中
+Loading 加载中
 </demo>
 <template>
   <div>
-    <Button loading>加载中</Button>
-    <Button>加载完毕</Button>
+    <Button loading>Loading</Button>
+    <Button loading disabled>Disabled</Button>
+    <Button loading level="danger">Danger</Button>
   </div>
 </template>
 

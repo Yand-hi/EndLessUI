@@ -52,7 +52,9 @@ $color: #333;
 $blue: #40a9ff;
 $radius: 4px;
 $red: red;
+$warn: #e6a23c;
 $grey: grey;
+$link: #1d2c40;
 .free-button {
   box-sizing: border-box;
   height: $h;
@@ -97,7 +99,7 @@ $grey: grey;
     color: inherit;
     &:hover,
     &:focus {
-      background: darken(white, 5%);
+      background: lighten(white, 5%);
     }
   }
   &.free-size-big {
@@ -117,8 +119,8 @@ $grey: grey;
       border-color: $blue;
       &:hover,
       &:focus {
-        background: darken($blue, 10%);
-        border-color: darken($blue, 10%);
+        background: lighten($blue, 10%);
+        border-color: lighten($blue, 10%);
       }
     }
     &.free-level-danger {
@@ -127,8 +129,18 @@ $grey: grey;
       color: white;
       &:hover,
       &:focus {
-        background: darken($red, 10%);
-        border-color: darken($red, 10%);
+        background: lighten($red, 10%);
+        border-color: lighten($red, 10%);
+      }
+    }
+    &.free-level-warning {
+      background: $warn;
+      border-color: $warn;
+      color: white;
+      &:hover,
+      &:focus {
+        background: lighten($warn, 10%);
+        border-color: lighten($warn, 10%);
       }
     }
   }
@@ -137,7 +149,14 @@ $grey: grey;
       color: $red;
       &:hover,
       &:focus {
-        color: darken($red, 10%);
+        color: lighten($red, 10%);
+      }
+    }
+    &.free-level-warning {
+      color: $warn;
+      &:hover,
+      &:focus {
+        color: lighten($warn, 10%);
       }
     }
   }
@@ -146,14 +165,21 @@ $grey: grey;
       color: $blue;
       &:hover,
       &:focus {
-        color: darken($blue, 10%);
+        color: lighten($blue, 10%);
       }
     }
     &.free-level-danger {
       color: $red;
       &:hover,
       &:focus {
-        color: darken($red, 10%);
+        color: lighten($red, 10%);
+      }
+    }
+    &.free-level-warning {
+      color: $warn;
+      &:hover,
+      &:focus {
+        color: lighten($warn, 10%);
       }
     }
   }

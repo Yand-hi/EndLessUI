@@ -1,5 +1,5 @@
 <demo>
-基础用法
+常规用法
 </demo>
 <template>
   <div>

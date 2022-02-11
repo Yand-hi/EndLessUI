@@ -1,5 +1,5 @@
 <demo>
-支持 disabled
+disabled 禁用
 </demo>
 <template>
   <Button disabled>禁用按钮</Button>
