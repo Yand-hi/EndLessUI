@@ -1,6 +1,6 @@
 <template>
   <div class="free-tabs">
-    <div class="free-tabs-nav" ref="container">
+    <div :class="[{card:type},'free-tabs-nav']" ref="container">
       <div
         class="free-tabs-nav-item"
         v-for="(CNode, index) in CNodes"
@@ -35,6 +35,7 @@ import { computed, ref, onMounted, watchEffect, onUpdated } from "vue";
 export default {
   props: {
     selected: String,
+    type: String
   },
   setup(props, context) {
     const selectedItem = ref<HTMLDivElement>(null);
@@ -125,6 +126,26 @@ $border-color: #d9d9d9;
   }
   &-content {
     padding: 8px 0;
+  }
+  .card {
+    border: 1px solid #e4e7ed;
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+    transition: transform .3s;
+    .free-tabs-nav-item {
+      margin: 0;
+      padding: 10px 20px;
+      border-right: 1px solid #e4e7ed;
+      border-bottom: 1px solid #e4e7ed;
+      &.selected {
+        border-bottom: none;
+        background: #f9fafc;
+      }
+    }
+    .free-tabs-nav-indicator {
+      height: 0;
+      transition: all 250ms;
+    }
   }
 }
 </style>

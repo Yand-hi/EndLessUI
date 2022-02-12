@@ -26,6 +26,13 @@
         <td>&nbsp/</td>
         <td>false</td>
       </tr>
+      <tr>
+        <td>type</td>
+        <td>标签页类型</td>
+        <td>string</td>
+        <td>card</td>
+        <td>&nbsp/</td>
+      </tr>
       </tbody>
     </table>
   </div>

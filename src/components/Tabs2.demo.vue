@@ -1,11 +1,11 @@
 <demo>
-支持 disabled
+disabled 禁用
 </demo>
 <template>
   <Tabs v-model:selected="x">
-    <Tab title="导航1">内容1</Tab>
-    <Tab title="导航2">内容2</Tab>
-    <Tab title="导航3" disabled>内容3</Tab>
+    <Tab title="导航1">Vue</Tab>
+    <Tab title="导航2">React</Tab>
+    <Tab title="导航3" disabled>这个看不见</Tab>
   </Tabs>
 </template>
 
@@ -18,7 +18,7 @@ export default {
     Tab,
   },
   setup() {
-    const x = ref("导航1");
+    const x = ref("导航2");
     return {
       x,
     };
