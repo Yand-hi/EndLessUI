@@ -13,17 +13,24 @@
       </thead>
       <tbody>
       <tr>
+        <td>value</td>
+        <td>双向绑定数据</td>
+        <td>boolean</td>
+        <td>—</td>
+        <td>bool</td>
+      </tr>
+      <tr>
         <td>disabled</td>
         <td>是否禁用状态</td>
         <td>boolean</td>
-        <td>&nbsp/</td>
+        <td>—</td>
         <td>false</td>
       </tr>
       <tr>
         <td>loading</td>
         <td>是否加载中状态</td>
         <td>boolean</td>
-        <td>&nbsp/</td>
+        <td>—</td>
         <td>false</td>
       </tr>
       </tbody>

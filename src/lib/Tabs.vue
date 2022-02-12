@@ -1,20 +1,20 @@
 <template>
   <div class="free-tabs">
-    <div :class="[{card:type},'free-tabs-nav']" ref="container">
+    <div :class="[{card:type==='card'},'free-tabs-nav']" ref="container">
       <div
-        class="free-tabs-nav-item"
-        v-for="(CNode, index) in CNodes"
-        :ref="
+          class="free-tabs-nav-item"
+          v-for="(CNode, index) in CNodes"
+          :ref="
           (el) => {
             if (CNode.props.title === selected) selectedItem = el;
           }
         "
-        @click="select(CNode)"
-        :class="
+          @click="select(CNode)"
+          :class="
           [CNode.props.title === selected ? 'selected' : ''] +
           [CNode.props.disabled === '' ? 'disabled' : '']
         "
-        :key="index"
+          :key="index"
       >
         {{ CNode.props.title }}
       </div>
@@ -22,20 +22,24 @@
     </div>
     <div class="free-tabs-content">
       <component
-        class="free-tabs-content-item"
-        :key="current.props.title"
-        :is="current"
+          class="free-tabs-content-item"
+          :key="current.props.title"
+          :is="current"
       />
     </div>
   </div>
 </template>
 <script lang="ts">
 import Tab from "./Tab.vue";
-import { computed, ref, onMounted, watchEffect, onUpdated } from "vue";
+import {computed, ref, onMounted, watchEffect, onUpdated} from "vue";
+
 export default {
   props: {
     selected: String,
-    type: String
+    type: {
+      type: String,
+      default: 'tab'
+    }
   },
   setup(props, context) {
     const selectedItem = ref<HTMLDivElement>(null);
@@ -43,19 +47,19 @@ export default {
     const container = ref<HTMLDivElement>(null);
     onMounted(() => {
       watchEffect(
-        () => {
-          const { width } = selectedItem.value.getBoundingClientRect();
-          indicator.value.style.width = width + "px";
-          const { left: NavLeft } = container.value.getBoundingClientRect();
-          const { left: SelectedLeft } =
-            selectedItem.value.getBoundingClientRect();
-          const left = SelectedLeft - NavLeft;
-          indicator.value.style.left = left + "px";
-        },
-        // 解决异步
-        {
-          flush: "post", //效果更新需要缓冲时间
-        }
+          () => {
+            const {width} = selectedItem.value.getBoundingClientRect();
+            indicator.value.style.width = width + "px";
+            const {left: NavLeft} = container.value.getBoundingClientRect();
+            const {left: SelectedLeft} =
+                selectedItem.value.getBoundingClientRect();
+            const left = SelectedLeft - NavLeft;
+            indicator.value.style.left = left + "px";
+          },
+          // 解决异步
+          {
+            flush: "post", //效果更新需要缓冲时间
+          }
       );
     });
     // 获取插槽结点
@@ -99,21 +103,26 @@ $border-color: #d9d9d9;
     color: $color;
     border-bottom: 1px solid $border-color;
     position: relative;
+
     &-item {
       padding: 8px 0;
       margin: 0 16px;
       cursor: pointer;
+
       &.disabled {
         color: #ccc;
         cursor: not-allowed;
       }
+
       &:first-child {
         margin-left: 0;
       }
+
       &.selected {
         color: $blue;
       }
     }
+
     &-indicator {
       position: absolute;
       height: 3px;
@@ -124,24 +133,29 @@ $border-color: #d9d9d9;
       transition: all 250ms;
     }
   }
+
   &-content {
     padding: 8px 0;
   }
+
   .card {
     border: 1px solid #e4e7ed;
     border-bottom: none;
     border-radius: 4px 4px 0 0;
     transition: transform .3s;
+
     .free-tabs-nav-item {
       margin: 0;
       padding: 10px 20px;
       border-right: 1px solid #e4e7ed;
       border-bottom: 1px solid #e4e7ed;
+
       &.selected {
         border-bottom: none;
         background: #f9fafc;
       }
     }
+
     .free-tabs-nav-indicator {
       height: 0;
       transition: all 250ms;

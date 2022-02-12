@@ -1,6 +1,7 @@
 <template>
   <button class="free-button" :class="classes" :disabled="disabled">
-    <span v-if="loading" class="free-loadingIndicator"></span>
+    <span v-if="loading"
+          :class="[level==='normal'?'free-loadingIndicator':'no-normal']"></span>
     <slot />
   </button>
 </template>
@@ -200,12 +201,25 @@ $link: #1d2c40;
     }
   }
   > .free-loadingIndicator {
+    cursor: wait;
     width: 14px;
     height: 14px;
     display: inline-block;
     margin-right: 4px;
     border-radius: 8px;
     border-color: $blue $blue $blue transparent;
+    border-style: solid;
+    border-width: 2px;
+    animation: free-spin 1s infinite linear;
+  }
+  > .no-normal {
+    cursor: wait;
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin-right: 4px;
+    border-radius: 8px;
+    border-color: white white white transparent;
     border-style: solid;
     border-width: 2px;
     animation: free-spin 1s infinite linear;

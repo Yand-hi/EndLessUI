@@ -5,6 +5,7 @@ Loading 加载中
   <div>
     <Button loading>Loading</Button>
     <Button loading disabled>Disabled</Button>
+    <Button loading level="warning">Warning</Button>
     <Button loading level="danger">Danger</Button>
   </div>
 </template>

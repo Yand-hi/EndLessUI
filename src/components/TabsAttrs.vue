@@ -16,22 +16,22 @@
         <td>title</td>
         <td>Tab 栏标题</td>
         <td>string</td>
-        <td>&nbsp/</td>
-        <td>&nbsp/</td>
-      </tr>
-      <tr>
-        <td>disabled</td>
-        <td>是否禁用状态</td>
-        <td>boolean</td>
-        <td>&nbsp/</td>
-        <td>false</td>
+        <td>—</td>
+        <td>—</td>
       </tr>
       <tr>
         <td>type</td>
         <td>标签页类型</td>
         <td>string</td>
         <td>card</td>
-        <td>&nbsp/</td>
+        <td>tab</td>
+      </tr>
+      <tr>
+        <td>disabled</td>
+        <td>是否禁用状态</td>
+        <td>boolean</td>
+        <td>—</td>
+        <td>false</td>
       </tr>
       </tbody>
     </table>
