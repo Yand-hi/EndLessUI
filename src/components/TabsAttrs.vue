@@ -13,25 +13,18 @@
       </thead>
       <tbody>
       <tr>
-        <td>2019</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
+        <td>title</td>
+        <td>Tab 栏标题</td>
+        <td>string</td>
+        <td>&nbsp/</td>
+        <td>&nbsp/</td>
       </tr>
       <tr>
-        <td>2020</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
-      </tr>
-      <tr>
-        <td>2021</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
+        <td>disabled</td>
+        <td>是否禁用状态</td>
+        <td>boolean</td>
+        <td>&nbsp/</td>
+        <td>false</td>
       </tr>
       </tbody>
     </table>

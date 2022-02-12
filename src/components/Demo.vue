@@ -7,13 +7,13 @@
     <div class="demo-actions">
       <Button @click="hideCode" v-if="codeVisible">
         <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-show"></use>
+          <use xlink:href="#icon-up"></use>
         </svg>
         &nbsp隐藏代码
       </Button>
       <Button @click="showCode" v-else>
         <svg class="icon" aria-hidden="true">
-          <use xlink:href="#icon-close"></use>
+          <use xlink:href="#icon-down"></use>
         </svg>
         &nbsp查看代码
       </Button>

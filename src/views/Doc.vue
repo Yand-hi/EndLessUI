@@ -93,7 +93,7 @@ $color-active: #646cff;
 }
 aside {
   background: #fff;
-  box-shadow: 5px 0 5px rgb(51 51 51 / 10%);
+  box-shadow: 2px 0 2px rgb(51 51 51 / 10%);
   width: 150px;
   position: fixed;
   top: 0;
