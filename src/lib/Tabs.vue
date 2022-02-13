@@ -1,5 +1,5 @@
 <template>
-  <div class="free-tabs">
+  <div :class="[{cardTabs:type==='card'},'free-tabs']">
     <div :class="[{card:type==='card'},'free-tabs-nav']" ref="container">
       <div
           class="free-tabs-nav-item"
@@ -97,6 +97,8 @@ export default {
 $blue: #40a9ff;
 $color: #333;
 $border-color: #d9d9d9;
+$card-bg: #f9fafc;
+$card-border-color: #e4e7ed;
 .free-tabs {
   &-nav {
     display: flex;
@@ -139,7 +141,7 @@ $border-color: #d9d9d9;
   }
 
   .card {
-    border: 1px solid #e4e7ed;
+    border: 1px solid $card-border-color;
     border-bottom: none;
     border-radius: 4px 4px 0 0;
     transition: transform .3s;
@@ -147,12 +149,12 @@ $border-color: #d9d9d9;
     .free-tabs-nav-item {
       margin: 0;
       padding: 10px 20px;
-      border-right: 1px solid #e4e7ed;
-      border-bottom: 1px solid #e4e7ed;
+      border-right: 1px solid $card-border-color;
+      border-bottom: 1px solid $card-border-color;
 
       &.selected {
         border-bottom: none;
-        background: #f9fafc;
+        background: $card-bg;
       }
     }
 
@@ -163,13 +165,18 @@ $border-color: #d9d9d9;
   }
 
   .cardContent {
-    background: #f9fafc;
+    background: $card-bg;
     padding-left: 18px;
     padding-top: 20px;
     padding-bottom: 50px;
-    border-left: 1px solid #e4e7ed;
-    border-right: 1px solid #e4e7ed;
-    border-bottom: 1px solid #e4e7ed;
+    border-left: 1px solid $card-border-color;
+    border-right: 1px solid $card-border-color;
+    border-bottom: 1px solid $card-border-color;
   }
+}
+
+.cardTabs:hover {
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  transition: .5s;
 }
 </style>
