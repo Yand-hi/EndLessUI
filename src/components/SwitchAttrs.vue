@@ -33,6 +33,20 @@
         <td>—</td>
         <td>false</td>
       </tr>
+      <tr>
+        <td>checkedText</td>
+        <td>打开状态文字</td>
+        <td>string</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>uncheckedText</td>
+        <td>关闭状态文字</td>
+        <td>string</td>
+        <td>—</td>
+        <td>—</td>
+      </tr>
       </tbody>
     </table>
   </div>
@@ -79,6 +93,7 @@ $border-color: #d9d9d9;
       }
 
     }
+
     thead tr th:first-child, tbody tr td:first-child {
       width: 20%;
     }

@@ -1,9 +1,13 @@
 <demo>
-定时加载
+带有文本提示
 </demo>
 
 <template>
-  <Switch v-model:value="bool" v-model:loading="x" :time="3000"/>
+  <Switch
+      v-model:value="bool"
+      checked-text="on"
+      unchecked-text="off"
+  />
 </template>
 
 <script lang="ts">
@@ -15,11 +19,9 @@ export default {
     Switch,
   },
   setup() {
-    const bool = ref(false);
-    const x = bool.value
+    const bool = ref(true);
     return {
       bool,
-      x
     };
   },
 };

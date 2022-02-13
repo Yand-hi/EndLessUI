@@ -6,10 +6,13 @@
       :disabled="loading ? true : disabled"
   >
     <span><span class="switch-loading" v-if="loading"></span></span>
+    <div :class="[value?'checked-text':'unchecked-text']">{{ text }}</div>
   </button>
 </template>
 
 <script lang="ts">
+import {computed} from 'vue'
+
 export default {
   props: {
     value: Boolean,
@@ -21,12 +24,24 @@ export default {
       type: Boolean,
       default: false,
     },
+    checkedText: {
+      type: String
+    },
+    uncheckedText: {
+      type: String
+    }
   },
   setup(props, context) {
     const toggle = () => {
       context.emit("update:value", !props.value);
     };
-    return {toggle};
+    const text = computed(() => {
+      if (props.value) {
+        return props.checkedText
+      }
+      return props.uncheckedText
+    })
+    return {text, toggle};
   },
 };
 </script>
@@ -114,6 +129,31 @@ $h2: $h - 4px;
       width: $h2 + 0;
       margin-left: 0;
     }
+  }
+
+  .unchecked-text {
+    color: white;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    height: $h2;
+    width: $h2;
+    line-height: 18px;
+    font-size: 14px;
+    text-align: center;
+    transition: all 250ms;
+  }
+  .checked-text {
+    color: white;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: $h2;
+    width: $h2;
+    line-height: 18px;
+    font-size: 14px;
+    text-align: center;
+    transition: all 250ms;
   }
 }
 </style>
