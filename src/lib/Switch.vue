@@ -1,9 +1,9 @@
 <template>
   <button
-    class="free-switch"
-    @click="toggle"
-    :class="{ 'free-checked': value }"
-    :disabled="loading ? true : disabled"
+      class="free-switch"
+      @click="toggle"
+      :class="{ 'free-checked': value, 'disabled-checked':disabled, 'loading-checked':loading}"
+      :disabled="loading ? true : disabled"
   >
     <span><span class="switch-loading" v-if="loading"></span></span>
   </button>
@@ -20,13 +20,13 @@ export default {
     disabled: {
       type: Boolean,
       default: false,
-    }
+    },
   },
   setup(props, context) {
     const toggle = () => {
       context.emit("update:value", !props.value);
     };
-    return { toggle };
+    return {toggle};
   },
 };
 </script>
@@ -43,6 +43,7 @@ $h2: $h - 4px;
   position: relative;
   -webkit-tap-highlight-color: transparent;
   cursor: pointer;
+
   > span {
     position: absolute;
     top: 2px;
@@ -52,6 +53,7 @@ $h2: $h - 4px;
     background: white;
     border-radius: $h2 / 2;
     transition: all 250ms;
+
     > .switch-loading {
       width: 14px;
       height: 14px;
@@ -59,34 +61,58 @@ $h2: $h - 4px;
       cursor: wait;
       display: inline-block;
       border-radius: 8px;
-      border-color: lighten(#1890ff, 20%) lighten(#1890ff, 10%) #1890ff
-        transparent;
+      border-color: lighten(#1890ff, 20%) lighten(#1890ff, 10%) #1890ff transparent;
       border-style: solid;
       border-width: 2px;
       animation: free-spin 1s infinite linear;
     }
   }
+
   &[disabled] {
     cursor: not-allowed;
   }
+
   &.free-checked {
     background: #1890ff;
+
     > span {
       left: calc(100% - #{$h2} - 2px);
     }
   }
+
   &:focus {
     outline: none;
   }
+
   &:active {
     > span {
       width: $h2 + 4px;
     }
   }
+
   &.free-checked:active {
     > span {
       width: $h2 + 4px;
       margin-left: -4px;
+    }
+  }
+
+  &.loading-checked {
+    background: lighten(#1890ff, 14%);
+  }
+
+  &.disabled-checked {
+    background: lighten(#1890ff, 24%);
+
+    > span {
+      transition: none;
+    }
+  }
+
+  &.disabled-checked:active, &.loading-checked:active {
+    > span {
+      width: $h2 + 0;
+      margin-left: 0;
     }
   }
 }
