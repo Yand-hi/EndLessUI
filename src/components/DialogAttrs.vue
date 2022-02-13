@@ -23,15 +23,66 @@
         <td>onClickOverlay</td>
         <td>点击遮罩层是否可关闭 Dialog</td>
         <td>boolean</td>
-        <td>4</td>
         <td>false</td>
+        <td>true</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="attrs">
+    <h2>Event</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>事件名称</th>
+        <th>说明</th>
+        <th>回调参数</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>close</td>
+        <td>Dialog 关闭的回调</td>
+        <td>—</td>
       </tr>
       <tr>
-        <td>2021</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
+        <td>onClickOverlay</td>
+        <td>遮罩层关闭的回调</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>ok</td>
+        <td>点击确认的回调</td>
+        <td>—</td>
+      </tr>
+      <tr>
+        <td>cancel</td>
+        <td>点击取消的回调</td>
+        <td>—</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="attrs">
+    <h2>Slot</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>name</th>
+        <th>说明</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>title</td>
+        <td>Dialog 标题内容</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>content</td>
+        <td>Dialog 文本内容</td>
+        <td></td>
       </tr>
       </tbody>
     </table>

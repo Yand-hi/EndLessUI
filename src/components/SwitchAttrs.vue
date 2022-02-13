@@ -14,7 +14,7 @@
       <tbody>
       <tr>
         <td>value</td>
-        <td>双向绑定数据</td>
+        <td>双向数据绑定</td>
         <td>boolean</td>
         <td>—</td>
         <td>bool</td>

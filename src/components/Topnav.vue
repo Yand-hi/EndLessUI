@@ -8,16 +8,13 @@
     </router-link>
     <ul class="menu">
       <li>
-        <a href="https://github.com/Yand-hi/FreeUI/issues">issue</a>
-      </li>
-      <li>
-        <a href="#">star</a>
-      </li>
-      <li>
         <a href="https://www.npmjs.com/package/free-ui-1">npm</a>
       </li>
       <li>
-        <router-link to="/doc">Gmail</router-link>
+        <a href="https://github.com/Yand-hi/FreeUI/issues">Issue</a>
+      </li>
+      <li>
+        <a href="https://github.com/Yand-hi/FreeUI/Readme">Readme</a>
       </li>
     </ul>
     <svg

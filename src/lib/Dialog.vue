@@ -5,11 +5,11 @@
       <div class="free-dialog-wrapper">
         <div class="free-dialog">
           <header>
-            <slot name="title" />
+            <slot name="title"/>
             <span @click="close" class="free-dialog-close"></span>
           </header>
           <main>
-            <slot name="content" />
+            <slot name="content"/>
           </main>
           <footer>
             <Button @click="ok" level="main">确定</Button>
@@ -23,8 +23,9 @@
 
 <script lang="ts">
 import Button from "./Button.vue";
+
 export default {
-  components: { Button },
+  components: {Button},
   props: {
     visible: {
       type: Boolean,
@@ -59,7 +60,7 @@ export default {
       props.cancel?.();
       close();
     };
-    return { close, onClickOverlay, ok, cancel };
+    return {close, onClickOverlay, ok, cancel};
   },
 };
 </script>
@@ -72,6 +73,7 @@ $radius: 2px;
   box-shadow: 0 0 3px fade_out(black, 0.5);
   min-width: 30em;
   max-width: 90%;
+
   &-overlay {
     position: fixed;
     top: 0;
@@ -81,6 +83,7 @@ $radius: 2px;
     background: fade_out(black, 0.5);
     z-index: 30;
   }
+
   &-wrapper {
     position: fixed;
     left: 50%;
@@ -88,6 +91,7 @@ $radius: 2px;
     transform: translate(-50%, -50%);
     z-index: 31;
   }
+
   > header {
     padding: 16px 16px;
     display: flex;
@@ -95,19 +99,23 @@ $radius: 2px;
     justify-content: space-between;
     font-size: 20px;
   }
+
   > main {
     padding: 16px 16px;
   }
+
   > footer {
     padding: 16px 16px;
     text-align: right;
   }
+
   &-close {
     position: relative;
     display: inline-block;
     width: 16px;
     height: 16px;
     cursor: pointer;
+
     &::before,
     &::after {
       content: "";
@@ -118,9 +126,11 @@ $radius: 2px;
       top: 50%;
       left: 50%;
     }
+
     &::before {
       transform: translate(-50%, -50%) rotate(-45deg);
     }
+
     &::after {
       transform: translate(-50%, -50%) rotate(45deg);
     }
