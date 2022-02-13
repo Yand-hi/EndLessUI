@@ -3,13 +3,14 @@
 </demo>
 <template>
   <div>
-    <Button @click="showDialog">打开对话框</Button>
+    <Button @click="showDialog" theme="text" level="main">打开对话框</Button>
   </div>
 </template>
 
 <script lang="ts">
-import { Button, openDialog } from "../lib/index";
-import { h } from "vue";
+import {Button, openDialog} from "../lib/index";
+import {h} from "vue";
+
 export default {
   components: {
     Button,
@@ -17,13 +18,11 @@ export default {
   setup() {
     const showDialog = () => {
       openDialog({
-        title: h("strong", {}, "标题"),
+        title: h("p", {}, "标题"),
         content: "你好",
         ok() {
-          console.log("ok");
         },
         cancel() {
-          console.log("cancel");
         },
       });
     };

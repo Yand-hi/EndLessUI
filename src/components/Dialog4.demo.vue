@@ -1,5 +1,5 @@
 <demo>
-常规使用
+确定按钮关闭可选
 </demo>
 <template>
   <div>
@@ -7,12 +7,13 @@
     <Dialog
         v-model:visible="x"
         :ok="f1"
-        :cancel="f2">
+        :cancel="f2"
+    >
       <template v-slot:content>
-        <p>文本内容和标题支持 HTML 标签</p>
+        点击确认无法关闭，可通过设置属性选择开启
       </template>
       <template v-slot:title>
-        <strong>标题</strong>
+        标题
       </template>
     </Dialog>
   </div>
@@ -33,6 +34,8 @@ export default {
       x.value = !x.value;
     };
     const f1 = () => {
+      // do something
+      return false
     };
     const f2 = () => {
     };

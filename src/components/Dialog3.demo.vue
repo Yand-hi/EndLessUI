@@ -1,18 +1,19 @@
 <demo>
-常规使用
+遮罩层关闭可选
 </demo>
 <template>
   <div>
     <Button @click="toggle" theme="text" level="main">打开对话框</Button>
     <Dialog
         v-model:visible="x"
+        :on-click-overlay="false"
         :ok="f1"
         :cancel="f2">
       <template v-slot:content>
-        <p>文本内容和标题支持 HTML 标签</p>
+        点击遮罩层无法关闭，可通过设置属性选择开启
       </template>
       <template v-slot:title>
-        <strong>标题</strong>
+        标题
       </template>
     </Dialog>
   </div>
@@ -33,6 +34,7 @@ export default {
       x.value = !x.value;
     };
     const f1 = () => {
+      return true;
     };
     const f2 = () => {
     };

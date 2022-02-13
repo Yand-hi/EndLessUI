@@ -12,8 +12,8 @@
             <slot name="content" />
           </main>
           <footer>
-            <Button @click="ok" level="main">OK</Button>
-            <Button @click="cancel">Cancel</Button>
+            <Button @click="ok" level="main">确定</Button>
+            <Button @click="cancel">取消</Button>
           </footer>
         </div>
       </div>
@@ -65,13 +65,12 @@ export default {
 </script>
 
 <style lang="scss">
-$radius: 4px;
-$border-color: #d9d9d9;
+$radius: 2px;
 .free-dialog {
   background: white;
   border-radius: $radius;
   box-shadow: 0 0 3px fade_out(black, 0.5);
-  min-width: 15em;
+  min-width: 30em;
   max-width: 90%;
   &-overlay {
     position: fixed;
@@ -80,29 +79,27 @@ $border-color: #d9d9d9;
     width: 100%;
     height: 100%;
     background: fade_out(black, 0.5);
-    z-index: 10;
+    z-index: 30;
   }
   &-wrapper {
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    z-index: 11;
+    z-index: 31;
   }
   > header {
-    padding: 12px 16px;
-    border-bottom: 1px solid $border-color;
+    padding: 16px 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 20px;
   }
   > main {
-    padding: 12px 16px;
+    padding: 16px 16px;
   }
   > footer {
-    border-top: 1px solid $border-color;
-    padding: 12px 16px;
+    padding: 16px 16px;
     text-align: right;
   }
   &-close {

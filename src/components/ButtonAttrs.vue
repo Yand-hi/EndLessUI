@@ -93,6 +93,21 @@ $border-color: #d9d9d9;
       }
 
     }
+
+    thead tr th:first-child, tbody tr td:first-child {
+      width: 14%;
+    }
+
+    thead tr th:nth-child(2), tbody tr td:nth-child(2) {
+      width: 22%;
+    }
+
+    thead tr th:nth-child(4), tbody tr td:nth-child(4) {
+      width: 30%;
+    }
+    thead tr th:last-child, tbody tr td:last-child {
+      width: 14%;
+    }
   }
 }
 </style>

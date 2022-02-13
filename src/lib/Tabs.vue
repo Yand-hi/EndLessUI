@@ -20,7 +20,7 @@
       </div>
       <div class="free-tabs-nav-indicator" ref="indicator"></div>
     </div>
-    <div class="free-tabs-content">
+    <div :class="[{cardContent:type==='card'},'free-tabs-content']">
       <component
           class="free-tabs-content-item"
           :key="current.props.title"
@@ -160,6 +160,16 @@ $border-color: #d9d9d9;
       height: 0;
       transition: all 250ms;
     }
+  }
+
+  .cardContent {
+    background: #f9fafc;
+    padding-left: 18px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    border-left: 1px solid #e4e7ed;
+    border-right: 1px solid #e4e7ed;
+    border-bottom: 1px solid #e4e7ed;
   }
 }
 </style>

@@ -13,18 +13,18 @@
       </thead>
       <tbody>
       <tr>
-        <td>2019</td>
-        <td>2</td>
-        <td>3</td>
-        <td>4</td>
-        <td>5</td>
+        <td>visible</td>
+        <td>是否显示 Dialog</td>
+        <td>boolean</td>
+        <td>—</td>
+        <td>false</td>
       </tr>
       <tr>
-        <td>2020</td>
-        <td>2</td>
-        <td>3</td>
+        <td>onClickOverlay</td>
+        <td>点击遮罩层是否可关闭 Dialog</td>
+        <td>boolean</td>
         <td>4</td>
-        <td>5</td>
+        <td>false</td>
       </tr>
       <tr>
         <td>2021</td>
@@ -77,6 +77,14 @@ $border-color: #d9d9d9;
         width: 84px;
       }
 
+    }
+
+    thead tr th:first-child, tbody tr td:first-child {
+      width: 18%;
+    }
+
+    thead tr th:nth-child(2), tbody tr td:nth-child(2) {
+      width: 35%;
     }
   }
 }
