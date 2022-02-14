@@ -1,16 +1,16 @@
 <demo>
-disabled 禁用
+基础用法
 </demo>
 <template>
   <Tabs v-model:selected="x">
-    <Tab title="导航1">Vue</Tab>
-    <Tab title="导航2">React</Tab>
-    <Tab title="导航3" disabled>这个看不见</Tab>
+    <Tab title="导航1">HTML</Tab>
+    <Tab title="导航2">CSS</Tab>
+    <Tab title="导航3">Javascript</Tab>
   </Tabs>
 </template>
 
 <script lang="ts">
-import { Tabs, Tab } from "../lib/index";
+import { Tabs, Tab } from "../../lib";
 import { ref } from "vue";
 export default {
   components: {
@@ -18,7 +18,7 @@ export default {
     Tab,
   },
   setup() {
-    const x = ref("导航2");
+    const x = ref("导航1");
     return {
       x,
     };

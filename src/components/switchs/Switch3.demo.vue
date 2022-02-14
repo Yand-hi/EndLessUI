@@ -1,21 +1,20 @@
 <demo>
-点击后加载中
+loading 加载中
 </demo>
 
 <template>
-  <Switch v-model:value="bool" :loading="bool"/>
+  <Switch v-model:value="bool" loading />
 </template>
 
 <script lang="ts">
-import {Switch} from "../lib/index";
-import {ref} from "vue";
-
+import { Switch } from "../../lib";
+import { ref } from "vue";
 export default {
   components: {
     Switch,
   },
   setup() {
-    const bool = ref(false);
+    const bool = ref(true);
     return {
       bool,
     };

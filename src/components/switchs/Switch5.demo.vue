@@ -1,14 +1,19 @@
 <demo>
-loading 加载中
+带有文本提示
 </demo>
 
 <template>
-  <Switch v-model:value="bool" loading />
+  <Switch
+      v-model:value="bool"
+      checked-text="on"
+      unchecked-text="off"
+  />
 </template>
 
 <script lang="ts">
-import { Switch } from "../lib/index";
-import { ref } from "vue";
+import {Switch} from "../../lib";
+import {ref} from "vue";
+
 export default {
   components: {
     Switch,

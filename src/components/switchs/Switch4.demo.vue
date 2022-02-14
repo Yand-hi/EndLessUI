@@ -1,17 +1,13 @@
 <demo>
-带有文本提示
+点击后加载中
 </demo>
 
 <template>
-  <Switch
-      v-model:value="bool"
-      checked-text="on"
-      unchecked-text="off"
-  />
+  <Switch v-model:value="bool" :loading="bool"/>
 </template>
 
 <script lang="ts">
-import {Switch} from "../lib/index";
+import {Switch} from "../../lib";
 import {ref} from "vue";
 
 export default {
@@ -19,7 +15,7 @@ export default {
     Switch,
   },
   setup() {
-    const bool = ref(true);
+    const bool = ref(false);
     return {
       bool,
     };

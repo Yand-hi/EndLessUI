@@ -17,7 +17,7 @@ import Switch3Demo from "./Switch3.demo.vue";
 import Switch4Demo from "./Switch4.demo.vue";
 import Switch5Demo from "./Switch5.demo.vue";
 import SwitchAttrs from './SwitchAttrs.vue'
-import Demo from "./Demo.vue";
+import Demo from "../Demo.vue";
 
 export default {
   components: {
