@@ -73,6 +73,9 @@ $radius: 2px;
   box-shadow: 0 0 3px fade_out(black, 0.5);
   min-width: 30em;
   max-width: 90%;
+  @media (max-width: 500px) {
+    min-width: 20em;
+  }
 
   &-overlay {
     position: fixed;
