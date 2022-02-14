@@ -13,14 +13,12 @@ import Dialog1Demo from "./Dialog1.demo.vue";
 import Dialog2Demo from "./Dialog2.demo.vue";
 import Dialog3Demo from "./Dialog3.demo.vue";
 import Dialog4Demo from "./Dialog4.demo.vue";
-import Attributes from './SwitchAttrs.vue'
 import DialogAttrs from './DialogAttrs.vue'
 
 export default {
   components: {
     DialogAttrs,
     Demo,
-    Attributes
   },
   setup() {
     return {

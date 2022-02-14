@@ -1,3 +1,3 @@
 <template>
-  <div>敬请期待！</div>
+  <div>待更新</div>
 </template>

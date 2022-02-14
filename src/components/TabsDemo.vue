@@ -11,13 +11,11 @@ import Demo from "./Demo.vue";
 import Tabs1Demo from "./Tabs1.demo.vue";
 import Tabs2Demo from "./Tabs2.demo.vue";
 import Tabs3Demo from "./Tabs3.demo.vue";
-import Attributes from './SwitchAttrs.vue'
 import TabsAttrs from './TabsAttrs.vue'
 
 export default {
   components: {
     TabsAttrs,
-    Attributes,
     Demo,
   },
   setup() {

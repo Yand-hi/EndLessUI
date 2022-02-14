@@ -1,3 +1,3 @@
 <template>
-  <div>未完待续。</div>
+  <div>待更新</div>
 </template>
