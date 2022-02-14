@@ -18,8 +18,8 @@ export default {
   setup() {
     const showDialog = () => {
       openDialog({
-        title: h("p", {}, "标题"),
-        content: "你好",
+        title: h("p", {}, "函数创建"),
+        content: "绑定点击事件调用外部函数，通过渲染函数渲染 Dialog 组件并挂载",
         ok() {
         },
         cancel() {
