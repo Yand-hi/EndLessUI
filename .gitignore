@@ -7,3 +7,4 @@ erro_log
 /.history
 /.idea
 .vscode
+*.error

@@ -58,7 +58,7 @@
     </table>
   </div>
   <div class="attrs">
-    <h2>Event</h2>
+    <h2>Events</h2>
     <table>
       <thead>
       <tr>

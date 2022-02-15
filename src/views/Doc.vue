@@ -9,10 +9,10 @@
             <router-link to="/doc/intro">&nbsp&nbsp&nbsp介绍</router-link>
           </li>
           <li>
-            <router-link to="/doc/start">&nbsp&nbsp&nbsp开始</router-link>
+            <router-link to="/doc/install">&nbsp&nbsp&nbsp安装</router-link>
           </li>
           <li>
-            <router-link to="/doc/install">&nbsp&nbsp&nbsp安装</router-link>
+            <router-link to="/doc/start">&nbsp&nbsp&nbsp快速上手</router-link>
           </li>
         </ol>
         <h2>组件列表</h2>
