@@ -1,6 +1,14 @@
 <template>
   <div class="my-input">
-    <input :type="type" :value="value" :placeholder="placeholder" :class="{disabled:disabled}">
+    <input
+        class="input_inner"
+        :type="type"
+        :value="value"
+        :disabled="disabled"
+        :placeholder="placeholder"
+        :class="{'disabled':disabled}"
+        @input="changeText"
+    >
   </div>
 </template>
 
@@ -13,6 +21,7 @@ export default {
     },
     placeholder: {
       type: String,
+      default: '请输入'
     },
     disabled: {
       type: Boolean,
@@ -20,9 +29,14 @@ export default {
     },
     value: {
       type: String || Number,
+      default: ''
     }
   },
-  setup() {
+  setup(props, context) {
+    const changeText = (e) => {
+      context.emit('update:value', e.target.value)
+    }
+    return {changeText}
   },
 };
 </script>
@@ -34,7 +48,7 @@ export default {
   display: inline-block;
   width: 220px;
 
-  input {
+  .input_inner {
     -webkit-appearance: none;
     background-color: #fff;
     border-radius: 4px;
@@ -49,11 +63,10 @@ export default {
     padding: 0 15px;
     transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
     width: 100%;
-    //cursor: pointer;
 
-    .disabled {
-      cursor: not-allowed;
+    &.disabled {
       background: #f5f7fa;
+      cursor: not-allowed;
     }
   }
 }

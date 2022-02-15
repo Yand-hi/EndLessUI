@@ -17,19 +17,17 @@ export default {
   },
   setup() {
     const text = ref('')
-    return {
-      text
-    }
+    return {text}
   },
 };
 </script>
 
 <style lang="scss" scoped>
 span {
+  color: #606266;
+  font-size: 14px;
   height: 40px;
   line-height: 40px;
-  outline: none;
   padding: 0 15px;
-  border: 1px solid red;
 }
 </style>

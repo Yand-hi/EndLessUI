@@ -1,9 +1,9 @@
 <demo>
-type 类型
+disabled 禁用
 </demo>
 
 <template>
-  <Input type="date" v-model:value="text" placeholder="请输入"/>
+  <Input v-model:value="text" placeholder="禁止输入状态" disabled/>
 </template>
 
 <script lang="ts">
