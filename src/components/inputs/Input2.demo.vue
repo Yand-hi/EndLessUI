@@ -3,7 +3,7 @@ type 类型
 </demo>
 
 <template>
-  <Input type="date" v-model:value="text" placeholder="请输入"/>
+  <Input type="date" v-model:value="text"/>
 </template>
 
 <script lang="ts">

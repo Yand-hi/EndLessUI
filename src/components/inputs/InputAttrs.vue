@@ -15,9 +15,23 @@
       <tr>
         <td>value</td>
         <td>双向数据绑定</td>
-        <td>boolean</td>
-        <td>—</td>
-        <td>bool</td>
+        <td>string / number</td>
+        <td>any</td>
+        <td>' '</td>
+      </tr>
+      <tr>
+        <td>type</td>
+        <td>input 类型</td>
+        <td>string</td>
+        <td>所有 input 原生 type</td>
+        <td>text</td>
+      </tr>
+      <tr>
+        <td>placeholder</td>
+        <td>占位符</td>
+        <td>string</td>
+        <td>any</td>
+        <td>请输入内容</td>
       </tr>
       <tr>
         <td>disabled</td>
@@ -27,25 +41,47 @@
         <td>false</td>
       </tr>
       <tr>
-        <td>loading</td>
-        <td>是否加载中状态</td>
+        <td>clearable</td>
+        <td>一键清空</td>
         <td>boolean</td>
         <td>—</td>
         <td>false</td>
       </tr>
       <tr>
-        <td>checkedText</td>
-        <td>打开状态文字</td>
-        <td>string</td>
+        <td>showPassword</td>
+        <td>显示和隐藏密码</td>
+        <td>boolean</td>
         <td>—</td>
-        <td>—</td>
+        <td>false</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="attrs">
+    <h2>Event</h2>
+    <table>
+      <thead>
+      <tr>
+        <th>事件名称</th>
+        <th>说明</th>
+        <th></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>changeText</td>
+        <td>更新 input 数据</td>
+        <td></td>
       </tr>
       <tr>
-        <td>uncheckedText</td>
-        <td>关闭状态文字</td>
-        <td>string</td>
-        <td>—</td>
-        <td>—</td>
+        <td>toggle</td>
+        <td>点击 icon 切换密码显示</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>clear</td>
+        <td>点击清空 input</td>
+        <td></td>
       </tr>
       </tbody>
     </table>

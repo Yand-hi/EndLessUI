@@ -3,7 +3,7 @@
 </demo>
 
 <template>
-  <Input v-model:value="text" placeholder="请输入"/>
+  <Input v-model:value="text" placeholder="请输入..."/>
   <span>{{ text }}</span>
 </template>
 
