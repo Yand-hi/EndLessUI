@@ -1,9 +1,73 @@
-# FreeUI
+<p align="center">
+  <img alt="logo" src="./src/assets/logo.png" width="120" style="margin-bottom: 10px;">
+</p>
+<h3 align="center">EndLess UI 组件库</h3>
 
-Free UI 是一款基于 Vue 3 和 TypeScript 开发的 UI 组件库
+<p align="center">
+  👉 <a href="https://yand-hi.github.io/free-ui/index.html">官方文档</a>
+</p>
 
-[官方文档](https://yand-hi.github.io/free-ui/index.html#/)
-# 运行步骤
-1. 运行 yarn
-2. 运行 yarn dev
-3. 打开 http://127.0.0.1:3000
+---
+
+### 介绍
+EndLess UI 是一款基于 `Vue 3` 和 `TypeScript` 开发的 UI 组件库，代码简单易读
+
+主要是自己练习使用，不建议将此 UI 库用于生产环境
+
+目前只有几个组件，后续会持续更新
+
+### 安装
+
+```bash
+# 通过 npm 安装
+npm i endless-ui
+
+# 通过 yarn 安装
+yarn add endless-ui
+```
+
+## 使用组件
+
+按需引入
+```js
+import {Button, Tabs, Tab, Switch, Dialog, openDialog, Input} from "endless-ui"
+```
+
+接着就可以在项目中直接使用组件
+
+```html
+<template>
+  <div>
+    <Button>按钮</Button>
+  </div>
+</template>
+<script>
+  import {Button, Tabs, Tab, Switch, Dialog, openDialog, Input} from "endless-ui"
+  export default {
+    components: {
+      Button,
+      Tabs,
+      Tab,
+      Switch,
+      Dialog,
+      Input
+    }
+  }
+</script>
+```
+
+## 运行方法
+
+```bash
+# 安装项目依赖
+yarn
+
+# 执行组件编译
+yarn dev
+```
+
+打开 http://127.0.0.1:3000
+
+## License
+
+[MIT](https://opensource.org/licenses/MIT)
