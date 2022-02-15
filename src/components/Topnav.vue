@@ -4,7 +4,7 @@
       <svg class="icon" aria-hidden="true">
         <use xlink:href="#icon-logo"></use>
       </svg>
-      <span> Infinite 官方文档</span>
+      <span> EndLess 官方文档</span>
     </router-link>
     <ul class="menu">
       <li>
