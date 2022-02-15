@@ -14,6 +14,11 @@
           <use :xlink:href="showPassword ? '#icon-close' : '#icon-show'"></use>
       </svg>
     </span>
+    <span class="clear" v-if="clearable" @click="clear">
+      <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-clear"></use>
+      </svg>
+    </span>
   </div>
 </template>
 
@@ -37,6 +42,10 @@ export default {
     value: {
       type: String || Number,
       default: ''
+    },
+    clearable: {
+      type: Boolean,
+      default: false
     }
   },
   setup(props, context) {
@@ -47,7 +56,10 @@ export default {
     const toggle = () => {
       showPassword.value = !showPassword.value
     }
-    return {showPassword, changeText, toggle}
+    const clear = () => {
+      context.emit('update:value', '')
+    }
+    return {showPassword, changeText, toggle, clear}
   },
 };
 </script>
@@ -81,13 +93,22 @@ export default {
     }
   }
 
-  .eyes {
+  .eyes, .clear {
     color: #606266;
-    font-size: 1.5em;
+    font-size: 1.4em;
     position: absolute;
     right: 10px;
     top: 6px;
     cursor: pointer;
+  }
+
+  .clear {
+    font-size: 0.8em;
+    top: 10px;
+
+    .clear:hover {
+      color: #666;
+    }
   }
 }
 </style>
