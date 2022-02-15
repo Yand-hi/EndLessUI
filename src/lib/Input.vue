@@ -1,19 +1,25 @@
 <template>
   <div class="my-input">
-    <input type="text" :placeholder="placeholder">
+    <input :type="type" :value="value" :placeholder="placeholder" :class="{disabled:disabled}">
   </div>
 </template>
 
 <script lang="ts">
 export default {
   props: {
+    type: {
+      type: String,
+      default: 'text'
+    },
     placeholder: {
       type: String,
-      default: ''
     },
-    input: {
+    disabled: {
+      type: Boolean,
+      default: false
+    },
+    value: {
       type: String || Number,
-      default: ''
     }
   },
   setup() {
@@ -31,7 +37,6 @@ export default {
   input {
     -webkit-appearance: none;
     background-color: #fff;
-    background-image: none;
     border-radius: 4px;
     border: 1px solid #dcdfe6;
     box-sizing: border-box;
@@ -44,7 +49,12 @@ export default {
     padding: 0 15px;
     transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
     width: 100%;
-    cursor: pointer;
+    //cursor: pointer;
+
+    .disabled {
+      cursor: not-allowed;
+      background: #f5f7fa;
+    }
   }
 }
 </style>

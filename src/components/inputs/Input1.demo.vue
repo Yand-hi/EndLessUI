@@ -1,12 +1,14 @@
 <demo>
-常规用法
+基础用法
 </demo>
 
 <template>
-  <Input v-model="input" placeholder="请输入"/>
+  <Input v-model:value="text" placeholder="请输入"/>
+  <span>{{ text }}</span>
 </template>
 
 <script lang="ts">
+import {ref} from 'vue'
 import {Input} from "../../lib";
 
 export default {
@@ -14,10 +16,20 @@ export default {
     Input,
   },
   setup() {
-    const input = ''
+    const text = ref('')
     return {
-      input
+      text
     }
   },
 };
 </script>
+
+<style lang="scss" scoped>
+span {
+  height: 40px;
+  line-height: 40px;
+  outline: none;
+  padding: 0 15px;
+  border: 1px solid red;
+}
+</style>
