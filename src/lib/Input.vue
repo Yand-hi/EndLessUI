@@ -2,17 +2,24 @@
   <div class="my-input">
     <input
         class="input_inner"
-        :type="type"
+        :type="type==='password' ? (showPassword ? 'text' : 'password') : type"
         :value="value"
         :disabled="disabled"
         :placeholder="placeholder"
         :class="{'disabled':disabled}"
         @input="changeText"
     >
+    <span class="eyes" v-if="type==='password'" @click="toggle">
+      <svg class="icon" aria-hidden="true">
+          <use :xlink:href="showPassword ? '#icon-close' : '#icon-show'"></use>
+      </svg>
+    </span>
   </div>
 </template>
 
 <script lang="ts">
+import {ref} from 'vue'
+
 export default {
   props: {
     type: {
@@ -33,10 +40,14 @@ export default {
     }
   },
   setup(props, context) {
+    const showPassword: Boolean = ref(false)
     const changeText = (e) => {
       context.emit('update:value', e.target.value)
     }
-    return {changeText}
+    const toggle = () => {
+      showPassword.value = !showPassword.value
+    }
+    return {showPassword, changeText, toggle}
   },
 };
 </script>
@@ -46,7 +57,7 @@ export default {
   position: relative;
   font-size: 14px;
   display: inline-block;
-  width: 220px;
+  width: 240px;
 
   .input_inner {
     -webkit-appearance: none;
@@ -68,6 +79,15 @@ export default {
       background: #f5f7fa;
       cursor: not-allowed;
     }
+  }
+
+  .eyes {
+    color: #606266;
+    font-size: 1.5em;
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    cursor: pointer;
   }
 }
 </style>
