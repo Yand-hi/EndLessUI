@@ -25,9 +25,9 @@
 </template>
 
 <script lang="ts">
-import Button from "../lib/Button.vue";
 import "prismjs";
 import "prismjs/themes/prism-tomorrow.css";
+import Button from "../lib/Button.vue";
 import {computed, ref} from "vue";
 
 const Prism = (window as any).Prism;

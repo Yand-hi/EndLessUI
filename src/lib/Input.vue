@@ -107,7 +107,7 @@ export default {
     top: 10px;
 
     .clear:hover {
-      color: #666;
+      color: #333333;
     }
   }
 }

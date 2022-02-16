@@ -3,7 +3,7 @@
 
 然后在按需引入相应的组件
 
-```js
+```
 import {Button, Tabs, Tab, Switch, Dialog, openDialog, Input} from "endless-ui"
 ```
 
@@ -13,7 +13,7 @@ import {Button, Tabs, Tab, Switch, Dialog, openDialog, Input} from "endless-ui"
 
 代码示例：
 
-```html
+```
 <template>
   <div>
     <Button>按钮</Button>
