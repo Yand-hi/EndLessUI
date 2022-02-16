@@ -60,54 +60,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$color-th: #909399;
-$color-td: #606266;
-$border-color: #d9d9d9;
-.attrs {
-  padding: 40px 24px;
+@import "src/lib/attributes.scss";
 
-  > table {
-    width: 100%;
-    text-align: left;
-    border-collapse: collapse;
+thead tr th:first-child, tbody tr td:first-child {
+  width: 14%;
+}
 
-    th, td {
-      padding-left: 10px;
-      border-bottom: 1px solid $border-color;
-    }
+thead tr th:nth-child(2), tbody tr td:nth-child(2) {
+  width: 22%;
+}
 
-    thead {
-      th {
-        color: $color-th;
-        font-weight: normal;
-        height: 70px;
-      }
-    }
+thead tr th:nth-child(4), tbody tr td:nth-child(4) {
+  width: 30%;
+}
 
-    tbody {
-      td {
-        font-size: 14px;
-        color: $color-td;
-        height: 50px;
-        width: 84px;
-      }
-
-    }
-
-    thead tr th:first-child, tbody tr td:first-child {
-      width: 14%;
-    }
-
-    thead tr th:nth-child(2), tbody tr td:nth-child(2) {
-      width: 22%;
-    }
-
-    thead tr th:nth-child(4), tbody tr td:nth-child(4) {
-      width: 30%;
-    }
-    thead tr th:last-child, tbody tr td:last-child {
-      width: 14%;
-    }
-  }
+thead tr th:last-child, tbody tr td:last-child {
+  width: 14%;
 }
 </style>
