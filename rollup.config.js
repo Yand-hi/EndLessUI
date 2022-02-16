@@ -10,8 +10,8 @@ export default {
     globals: {
       vue: 'Vue'
     },
-    name: 'Free',
-    file: 'dist/lib/free.js',
+    name: 'EndLess',
+    file: 'dist/lib/endless.js',
     format: 'umd',
     plugins: [terser()]
   },

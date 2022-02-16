@@ -4,7 +4,7 @@
 然后在按需引入相应的组件
 
 ```
-import {Button, Tabs, Tab, Switch, Dialog, openDialog, Input} from "endless-ui"
+import {Button, Tabs, Tab, Switch, Dialog, openDialog, Input, Skeleton} from "endless-ui"
 ```
 
 就可以开始使用我提供的组件了。
@@ -20,7 +20,7 @@ import {Button, Tabs, Tab, Switch, Dialog, openDialog, Input} from "endless-ui"
   </div>
 </template>
 <script>
-import {Button, Tabs, Tab, Switch, Dialog, openDialog, Input} from "endless-ui"
+import {Button, Tabs, Tab, Switch, Dialog, openDialog, Input, Skeleton} from "endless-ui"
 export default {
   components: {
     Button,
@@ -28,7 +28,8 @@ export default {
     Tab,
     Switch,
     Dialog,
-    Input
+    Input,
+    Skeleton
   }
 }
 </script>

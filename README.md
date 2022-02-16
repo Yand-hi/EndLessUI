@@ -12,7 +12,7 @@
 ### 介绍
 EndLess UI 是一款基于 `Vue 3` 和 `TypeScript` 开发的 UI 组件库，代码简单易读
 
-主要供自己学习练习使用，强烈不建议将此 UI 库用于生产环境
+主要供自己学习和练习使用，强烈不建议将此 UI 库用于生产环境
 
 目前只有几个组件，后续会持续更新🥳
 
@@ -50,7 +50,8 @@ import {Button, Tabs, Tab, Switch, Dialog, openDialog, Input, Skeleton} from "en
       Tab,
       Switch,
       Dialog,
-      Input
+      Input,
+      Skeleton
     }
   }
 </script>

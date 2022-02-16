@@ -2,12 +2,13 @@
   <button class="free-button" :class="classes" :disabled="disabled">
     <span v-if="loading"
           :class="[level==='normal'?'free-loadingIndicator':'no-normal']"></span>
-    <slot />
+    <slot/>
   </button>
 </template>
 
 <script lang="ts">
-import { computed } from "@vue/reactivity";
+import {computed} from "vue";
+
 export default {
   props: {
     theme: {
@@ -33,7 +34,7 @@ export default {
   },
 
   setup(props) {
-    const { theme, size, level, disabled } = props;
+    const {theme, size, level, disabled} = props;
     const classes = computed(() => {
       return {
         [`free-theme-${theme}`]: theme,
@@ -41,7 +42,7 @@ export default {
         [`free-level-${level}`]: level,
       };
     });
-    return { classes };
+    return {classes};
   },
 };
 </script>
@@ -71,73 +72,89 @@ $link: #1d2c40;
   border-radius: $radius;
   box-shadow: 0 1px 0 fade-out(black, 0.95);
   transition: background 250ms;
+
   & + & {
     margin-left: 8px;
   }
+
   &:hover,
   &:focus {
     color: $blue;
     border-color: $blue;
   }
+
   &:focus {
     outline: none;
   }
+
   &::-moz-focus-inner {
     border: 0;
   }
+
   &.free-theme-link {
     border-color: transparent;
     box-shadow: none;
     color: $blue;
+
     &:hover,
     &:focus {
       color: lighten($blue, 10%);
     }
   }
+
   &.free-theme-text {
     border-color: transparent;
     box-shadow: none;
     color: inherit;
+
     &:hover,
     &:focus {
       background: lighten(white, 5%);
     }
   }
+
   &.free-size-big {
     font-size: 24px;
     height: 48px;
     padding: 0 16px;
   }
+
   &.free-size-small {
     font-size: 12px;
     height: 20px;
     padding: 0 4px;
   }
+
   &.free-theme-button {
     &.free-level-main {
       background: $blue;
       color: white;
       border-color: $blue;
+
       &:hover,
       &:focus {
         background: lighten($blue, 10%);
         border-color: lighten($blue, 10%);
       }
     }
+
     &.free-level-danger {
       background: $red;
       border-color: $red;
       color: white;
+
       &:hover,
       &:focus {
         background: lighten($red, 10%);
         border-color: lighten($red, 10%);
       }
     }
+
     &.free-level-warning {
       background: $warn;
       border-color: $warn;
       color: white;
+
       &:hover,
       &:focus {
         background: lighten($warn, 10%);
@@ -145,54 +162,67 @@ $link: #1d2c40;
       }
     }
   }
+
   &.free-theme-link {
     &.free-level-danger {
       color: $red;
+
       &:hover,
       &:focus {
         color: lighten($red, 10%);
       }
     }
+
     &.free-level-warning {
       color: $warn;
+
       &:hover,
       &:focus {
         color: lighten($warn, 10%);
       }
     }
   }
+
   &.free-theme-text {
     &.free-level-main {
       color: $blue;
+
       &:hover,
       &:focus {
         color: lighten($blue, 10%);
       }
     }
+
     &.free-level-danger {
       color: $red;
+
       &:hover,
       &:focus {
         color: lighten($red, 10%);
       }
     }
+
     &.free-level-warning {
       color: $warn;
+
       &:hover,
       &:focus {
         color: lighten($warn, 10%);
       }
     }
   }
+
   &.free-theme-button {
     &[disabled] {
       cursor: not-allowed;
       color: $grey;
+
       &:hover {
         border-color: $grey;
       }
     }
   }
+
   &.free-theme-link,
   &.free-theme-text {
     &[disabled] {
@@ -200,6 +230,7 @@ $link: #1d2c40;
       color: $grey;
     }
   }
+
   > .free-loadingIndicator {
     cursor: wait;
     width: 14px;
@@ -212,6 +243,7 @@ $link: #1d2c40;
     border-width: 2px;
     animation: free-spin 1s infinite linear;
   }
+
   > .no-normal {
     cursor: wait;
     width: 14px;
@@ -225,6 +257,7 @@ $link: #1d2c40;
     animation: free-spin 1s infinite linear;
   }
 }
+
 @keyframes free-spin {
   0% {
     transform: rotate(0deg);

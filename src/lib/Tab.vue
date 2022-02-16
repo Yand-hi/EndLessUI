@@ -1,6 +1,6 @@
 <template>
   <div :disabled="disabled">
-    <slot />
+    <slot/>
   </div>
 </template>
 
@@ -15,3 +15,5 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped></style>
