@@ -10,6 +10,6 @@
 import Skeleton from '../../lib/Skeleton.vue'
 
 export default {
-  components: {Skeleton},
+  components: {Skeleton}
 };
 </script>

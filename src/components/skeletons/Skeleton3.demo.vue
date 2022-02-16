@@ -1,9 +1,9 @@
 <demo>
-rows 自定义行数
+animate 添加动画
 </demo>
 
 <template>
-  <Skeleton :rows="6"/>
+  <Skeleton :rows="6" animate/>
 </template>
 
 <script lang="ts">
