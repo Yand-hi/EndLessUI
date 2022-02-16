@@ -7,4 +7,4 @@ erro_log
 /.history
 /.idea
 .vscode
-*.error
+yarn-error.log
