@@ -4,7 +4,7 @@
 <h3 align="center">EndLess UI 组件库</h3>
 
 <p align="center">
-  👉 <a href="https://yand-hi.github.io/free-ui/index.html">官方文档</a>
+ ✨ <a href="https://yand-hi.github.io/endless-ui/index.html">官方文档</a>
 </p>
 
 ---
@@ -12,9 +12,9 @@
 ### 介绍
 EndLess UI 是一款基于 `Vue 3` 和 `TypeScript` 开发的 UI 组件库，代码简单易读
 
-主要是自己练习使用，不建议将此 UI 库用于生产环境
+主要供自己学习练习使用，强烈不建议将此 UI 库用于生产环境
 
-目前只有几个组件，后续会持续更新
+目前只有几个组件，后续会持续更新🥳
 
 ### 安装
 
@@ -30,7 +30,7 @@ yarn add endless-ui
 
 按需引入
 ```js
-import {Button, Tabs, Tab, Switch, Dialog, openDialog, Input} from "endless-ui"
+import {Button, Tabs, Tab, Switch, Dialog, openDialog, Input, Skeleton} from "endless-ui"
 ```
 
 接着就可以在项目中直接使用组件
@@ -42,7 +42,7 @@ import {Button, Tabs, Tab, Switch, Dialog, openDialog, Input} from "endless-ui"
   </div>
 </template>
 <script>
-  import {Button, Tabs, Tab, Switch, Dialog, openDialog, Input} from "endless-ui"
+  import {Button, Tabs, Tab, Switch, Dialog, openDialog, Input, Skeleton} from "endless-ui"
   export default {
     components: {
       Button,
