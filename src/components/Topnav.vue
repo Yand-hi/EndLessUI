@@ -8,13 +8,13 @@
     </router-link>
     <ul class="menu">
       <li>
-        <a href="https://www.npmjs.com/package/free-ui-1">npm</a>
+        <a href="https://www.npmjs.com/package/endless-ui">npm</a>
       </li>
       <li>
-        <a href="https://github.com/Yand-hi/FreeUI/issues">Issue</a>
+        <a href="https://github.com/Yand-hi/EndLessUI/issues">Issue</a>
       </li>
       <li>
-        <a href="https://github.com/Yand-hi/FreeUI/Readme">Readme</a>
+        <a href="https://github.com/Yand-hi/EndLessUI/blob/main/README.md">Readme</a>
       </li>
     </ul>
     <svg

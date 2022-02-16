@@ -12,4 +12,8 @@ npm install endless-ui
 yarn add endless-ui
 ```
 
-下一节：[开始使用](#/doc/start)
+
+
+
+
+下一节：[快速上手](#/doc/start)
