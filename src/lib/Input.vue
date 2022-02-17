@@ -104,7 +104,7 @@ export default {
 
   .clear {
     font-size: 0.8em;
-    top: 10px;
+    top: 11px;
 
     .clear:hover {
       color: #333333;
