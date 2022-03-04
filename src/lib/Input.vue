@@ -110,5 +110,8 @@ export default {
       color: #333333;
     }
   }
+  input[type="password"]::-ms-reveal {
+    display: none;
+  }
 }
 </style>
