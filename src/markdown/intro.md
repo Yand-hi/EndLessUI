@@ -14,7 +14,7 @@
 
 目前组件较少，后续会持续更新 🥳
 
-预期更新内容 👀
+已更新内容 👀
 
 - [x] Switch 开关
 - [x] Button 按钮
@@ -22,10 +22,7 @@
 - [x] Dialog 对话框
 - [x] Input 输入框
 - [x] Skeleton 骨架图
-- [ ] Card 卡片
-- [ ] Radio 单选框
-- [ ] Checkbox 多选框
-- [ ] Message 消息提示
+- [x] Bread 面包屑
 
 <div align="right">
 

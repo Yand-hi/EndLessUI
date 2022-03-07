@@ -4,32 +4,27 @@
 然后在按需引入相应的组件
 
 ```
-import {Button, Tabs, Tab, Switch, Dialog, openDialog, Input, Skeleton} from "endless-ui"
+import {Tabs, Tab} from "endless-ui"
 ```
 
 就可以开始使用我提供的组件了。
 
-## Vue 单文件组件
-
-代码示例：
+## 代码示例
 
 ```
 <template>
-  <div>
-    <Button>按钮</Button>
-  </div>
+  <Tabs v-model:selected="x">
+    <Tab title="导航1">HTML</Tab>
+    <Tab title="导航2">CSS</Tab>
+    <Tab title="导航3">Javascript</Tab>
+  </Tabs>
 </template>
 <script>
-import {Button, Tabs, Tab, Switch, Dialog, openDialog, Input, Skeleton} from "endless-ui"
+import {Tabs, Tab} from "endless-ui"
 export default {
   components: {
-    Button,
     Tabs, 
-    Tab,
-    Switch,
-    Dialog,
-    Input,
-    Skeleton
+    Tab
   }
 }
 </script>
