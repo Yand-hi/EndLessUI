@@ -4,7 +4,7 @@
 <template>
   <div>
      <Bread separator="＞＞">
-       <BreadItem to="/">首页</BreadItem>
+       <BreadItem to="/">Home</BreadItem>
        <BreadItem>Switch</BreadItem>
        <BreadItem>Button</BreadItem>
        <BreadItem>Dialog</BreadItem>
