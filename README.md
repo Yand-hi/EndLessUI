@@ -30,30 +30,27 @@ yarn add endless-ui
 
 按需引入
 ```js
-import {Button, Tabs, Tab, Switch, Dialog, openDialog, Input, Skeleton} from "endless-ui"
+import {Tabs, Tab} from "endless-ui"
 ```
 
 接着就可以在项目中直接使用组件
 
 ```html
 <template>
-  <div>
-    <Button>按钮</Button>
-  </div>
+  <Tabs v-model:selected="x">
+    <Tab title="导航1">HTML</Tab>
+    <Tab title="导航2">CSS</Tab>
+    <Tab title="导航3">Javascript</Tab>
+  </Tabs>
 </template>
 <script>
-  import {Button, Tabs, Tab, Switch, Dialog, openDialog, Input, Skeleton} from "endless-ui"
-  export default {
-    components: {
-      Button,
-      Tabs,
-      Tab,
-      Switch,
-      Dialog,
-      Input,
-      Skeleton
-    }
+import {Tabs, Tab} from "endless-ui"
+export default {
+  components: {
+    Tabs, 
+    Tab
   }
+}
 </script>
 ```
 
