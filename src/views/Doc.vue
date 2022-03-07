@@ -35,6 +35,9 @@
           <li>
             <router-link to="/doc/skeleton">&nbsp&nbsp&nbspSkeleton 组件</router-link>
           </li>
+          <li>
+            <router-link to="/doc/bread">&nbsp&nbsp&nbspBread 组件</router-link>
+          </li>
         </ol>
       </aside>
       <main>

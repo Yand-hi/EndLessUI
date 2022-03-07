@@ -5,4 +5,5 @@ export {default as Tabs} from './Tabs.vue';
 export {default as Dialog} from './Dialog.vue';
 export {default as Input} from './Input.vue';
 export {default as Skeleton} from './Skeleton.vue';
+export {default as Bread} from './Bread.vue';
 export {openDialog as openDialog} from './openDialog';

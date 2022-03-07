@@ -7,6 +7,7 @@ import SwitchDemo from './components/switchs/SwitchDemo.vue'
 import ButtonDemo from './components/buttons/ButtonDemo.vue'
 import DialogDemo from './components/dialogs/DialogDemo.vue'
 import SkeletonDemo from './components/skeletons/SkeletonDemo.vue'
+import BreadDemo from './components/breads/BreadDemo.vue'
 import {h} from 'vue';
 import intro from './markdown/intro.md'
 import start from './markdown/start.md'
@@ -33,6 +34,7 @@ export const router = createRouter({
         {path: 'tabs', component: TabsDemo},
         {path: 'input', component: InputDemo},
         {path: 'skeleton', component: SkeletonDemo},
+        {path: 'bread', component: BreadDemo},
       ]
     }
   ]
