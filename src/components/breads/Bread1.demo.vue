@@ -3,16 +3,25 @@
 </demo>
 <template>
   <div>
-    <Bread/>
+     <Bread separator="＞＞">
+       <BreadItem to="/">首页</BreadItem>
+       <BreadItem>Switch</BreadItem>
+       <BreadItem>Button</BreadItem>
+       <BreadItem>Dialog</BreadItem>
+       <BreadItem>Tabs</BreadItem>
+       <BreadItem>Input</BreadItem>
+       <BreadItem>Skeleton</BreadItem>
+       <BreadItem>Bread</BreadItem>
+     </Bread>
   </div>
 </template>
 
 <script lang="ts">
-import {Bread} from "../../lib";
-
+import {Bread, BreadItem} from "../../lib";
 export default {
   components: {
     Bread,
+    BreadItem
   },
 };
 </script>
